@@ -8,6 +8,7 @@ import Login from "./components/Login/login";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Addcashier from "./components/Addcashier/Addcashier";
 import Addproduct from "./components/pages/Addproduct/Addproduct";
+import User from "./components/pages/User/User";
 
 import "./App.css";
 
@@ -29,6 +30,7 @@ class App extends Component {
                             <Route exact path="/addcashier" component={Addcashier} />
                             <Route exact path="/dashboard" component={Auth(Dashboard)} />
                             <Route exact path="/addproduct" component={Addproduct} />
+                            <Route exact path="/userprofile" component={Auth(User)}/>
                         </div>
                     </div>
                 </Router>
