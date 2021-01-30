@@ -1,8 +1,30 @@
 import React, { Component } from "react";
+import jwt_decode from 'jwt-decode';
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
 
 class Navbar extends Component {
+    constructor() {
+        super()
+        this.state = {
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: ''
+        }
+    }
+
+    componentDidMount() {
+        const token = localStorage.usertoken;
+        const decoded = jwt_decode(token);
+        this.setState({
+            first_name: decoded.first_name,
+            last_name: decoded.last_name,
+            email: decoded.email
+        })
+    }
+
+
     logOut(e) {
         e.preventDefault();
         localStorage.removeItem('usertoken');
@@ -25,7 +47,11 @@ class Navbar extends Component {
         )
         const userLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
-              
+                <li>
+                    <Link className='btn btn-sm active mr-1 mb-1' to='/userprofile'>
+                        {this.state.first_name}
+                    </Link>
+                </li>
                 <li>
                     {/* <a href="/" rel='noopener noreferrer' onClick={this.logOut.bind(this)}>
                         Logout
