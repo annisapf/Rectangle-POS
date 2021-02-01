@@ -36,7 +36,7 @@ const MONGODB_URI = ""
 const mongoURI = "mongodb+srv://trilogy:trilogy@cluster0.u8m9s.mongodb.net/mernlogin?retryWrites=true&w=majority";
 
 // Connect to MongoDB
-mongoose.connect( MONGODB_URI|| "mongodb://localhost/posrectangle", {
+mongoose.connect( MONGODB_URI|| "mongodb://localhost:27017/posrectangle", {
   useNewUrlParser: true,
   useFindAndModify: false
 })
