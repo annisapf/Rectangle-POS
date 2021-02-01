@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
 import { Input, FormBtn } from "../Form/Form"
 import "./style.css"
 
 class Profile extends Component {
+
 
     render() {
         return (
@@ -14,12 +15,13 @@ class Profile extends Component {
                     <label>Username</label>
                     <Input onChange="" name="cashiername" value="" placeholder="john"/>
                     <label>Email</label> 
-                    <Input onChange="" name="cashierpassword" value="" placeholder="john@email.com"/>
+                    <Input onChange="" name="cashieremail" value="" placeholder="john@email.com"/>
                         
                     <FormBtn onClick="">
                     Add
                     </FormBtn>
                 </form>
+                <p>{}</p>
             </div>
         )
     }

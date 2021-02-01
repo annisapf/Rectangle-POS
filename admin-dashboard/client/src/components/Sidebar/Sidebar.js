@@ -28,11 +28,29 @@ function Sidebar() {
                                 <hr className="sidebar-divider d-none d-md-block" />
 
 
-                                {/* Nav Item - Profile */}
+                                {/* Nav Item - Add Cashier */}
                                 <Item active={''}
                                         href={"/addcashier"}
                                         icon={<i className="fas fa-user-alt" />}
                                         text={<span>Add Cashier</span>} />
+
+                                {/* Divider */}
+                                <hr className="sidebar-divider d-none d-md-block" />
+
+                                {/* Nav Item - List Cashier */}
+                                <Item active={''}
+                                        href={"/listcashier"}
+                                        icon={<i className="fas fa-user-alt" />}
+                                        text={<span>List Cashier</span>} />
+
+                                {/* Divider */}
+                                <hr className="sidebar-divider d-none d-md-block" />
+
+                                {/* Nav Item - Remove Cashier */}
+                                <Item active={''}
+                                        href={"/removecashier"}
+                                        icon={<i className="fas fa-user-alt" />}
+                                        text={<span>Remove Cashier</span>} />
 
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />

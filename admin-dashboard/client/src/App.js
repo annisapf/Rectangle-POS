@@ -9,6 +9,8 @@ import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Addcashier from "./components/Addcashier/Addcashier";
 import Addproduct from "./components/pages/Addproduct/Addproduct";
 import User from "./components/pages/User/User";
+import Listcashier from "./components/Listcashier/Listcashier"
+import Removecashier from "./components/Removecashier/Removecashier"
 
 import "./App.css";
 
@@ -28,6 +30,8 @@ class App extends Component {
                             <Route exact path="/register" component={Register} />
                             <Route exact path="/login" component={Login} />
                             <Route exact path="/addcashier" component={Addcashier} />
+                            <Route exact path="/listcashier" component={Listcashier} />
+                            <Route exact path="/removecashier" component={Removecashier} />
                             <Route exact path="/dashboard" component={Auth(Dashboard)} />
                             <Route exact path="/addproduct" component={Addproduct} />
                             <Route exact path="/userprofile" component={Auth(User)}/>
