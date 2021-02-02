@@ -2,8 +2,6 @@ import React, { Component, useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
 
 
-//import api_add_cashier from "../../utils/api_cashier_data"
-
 class Profile extends Component {
 
 
@@ -11,7 +9,7 @@ class Profile extends Component {
         return (
             <div className='container-fluid pl-0 m-0'>
                 <Sidebar />
-                <h1>Remove Cashier</h1>
+                <h1>List Product</h1>
                
            
             </div>

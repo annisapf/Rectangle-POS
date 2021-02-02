@@ -31,7 +31,7 @@ function Sidebar() {
                                 {/* Nav Item - Add Cashier */}
                                 <Item active={''}
                                         href={"/addcashier"}
-                                        icon={<i className="fas fa-user-alt" />}
+                                        icon={<i className="fas fa-user-plus" />}
                                         text={<span>Add Cashier</span>} />
 
                                 {/* Divider */}
@@ -40,31 +40,40 @@ function Sidebar() {
                                 {/* Nav Item - List Cashier */}
                                 <Item active={''}
                                         href={"/listcashier"}
-                                        icon={<i className="fas fa-user-alt" />}
+                                        icon={<i className="fas fa-users" />}
                                         text={<span>List Cashier</span>} />
 
-                                {/* Divider */}
-                                <hr className="sidebar-divider d-none d-md-block" />
-
-                                {/* Nav Item - Remove Cashier */}
-                                <Item active={''}
-                                        href={"/removecashier"}
-                                        icon={<i className="fas fa-user-alt" />}
-                                        text={<span>Remove Cashier</span>} />
 
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />
 
 
-                                {/* Nav Item - Roster */}
+                                {/* Nav Item - Add Product */}
                                 <Item active={''}
                                         href={"/addproduct"}
-                                        icon={<i className="fas fa-calendar-week" />}
+                                        icon={<i className="fas fa-cart-plus" />}
                                         text={<span>Add Product</span>} />
 
 
                                 {/* Divider */}
                                 <hr className="sidebar-divider d-none d-md-block" />
+
+                                
+                                {/* Nav Item - List Product */}
+                                <Item active={''}
+                                        href={"/listproduct"}
+                                        icon={<i className="fas fa-clipboard-list" />}
+                                        text={<span>List Product</span>} />
+
+                                {/* Divider */}
+                                <hr className="sidebar-divider d-none d-md-block" />
+
+                                
+                                {/* Nav Item - Transaction History */}
+                                <Item active={''}
+                                        href={"/transaction"}
+                                        icon={<i class="fas fa-chart-line"></i>}
+                                        text={<span>Transaction History</span>} />
 
 
                         </ul>
