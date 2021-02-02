@@ -7,6 +7,7 @@ module.exports = {
             {},
             function(err, obj)
             {
+                console.log(obj);
                 res.send(obj);
             }
         )
