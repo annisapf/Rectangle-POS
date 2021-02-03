@@ -6,11 +6,11 @@ import api_cashier from "../../utils/cashier_data"
 
 function Listcashier() {
 
-    const [addcashierState, setAddcashierState] = useState([]);
+    const [result, setResult] = useState([]);
 
     useEffect(() => {
         loadCashiers()
-    }, [setAddcashierState]);
+    }, [setResult]);
 
     function loadCashiers(){
     
@@ -19,7 +19,7 @@ function Listcashier() {
         .then(
             function(response)
             {
-                setAddcashierState(response.data)
+                setResult(response.data)
                 //console.log(response.data);
             }
         )
@@ -36,7 +36,7 @@ function Listcashier() {
             <div>
                 <Sidebar />
                 <h1>List Cashier</h1>
-                {addcashierState.map(cashier => (
+                {result.map(cashier => (
                     <Card
                     username={cashier.username}
                     email={cashier.email}
