@@ -15,13 +15,15 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-        const token = localStorage.usertoken;
-        const decoded = jwt_decode(token);
-        this.setState({
-            first_name: decoded.first_name,
-            last_name: decoded.last_name,
-            email: decoded.email
-        })
+      const token = localStorage.getItem('usertoken');
+        if (token) {
+            const decoded = jwt_decode(token);
+            this.setState({
+                first_name: decoded.first_name,
+                last_name: decoded.last_name,
+                email: decoded.email
+            })
+        }
     }
 
 
@@ -65,7 +67,7 @@ class Navbar extends Component {
         return (
             <nav className='navbar navbar-expand-lg'>
                 <div className='collapse navbar-collapse d-flex justify-content-end' id='navbar1'>
-                    {/*localStorage.usertoken ? userLink : loginRegLink*/}
+                    {localStorage.usertoken ? userLink : loginRegLink}
                 </div>
             </nav>
         )
