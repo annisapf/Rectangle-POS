@@ -65,7 +65,7 @@ class Navbar extends Component {
         return (
             <nav className='navbar navbar-expand-lg'>
                 <div className='collapse navbar-collapse d-flex justify-content-end' id='navbar1'>
-                    {localStorage.usertoken ? userLink : loginRegLink}
+                    {/*localStorage.usertoken ? userLink : loginRegLink*/}
                 </div>
             </nav>
         )
