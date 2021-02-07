@@ -24,7 +24,7 @@ export const loginUser = userData => {
         password: userData.password
     })
     .then(res => {
-        console.log(res.data);
+        console.log(res);
         var usertoken = res.data.token;
         var email = res.data.email;
         var first_name = res.data.first_name;

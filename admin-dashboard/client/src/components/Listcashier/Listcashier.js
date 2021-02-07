@@ -1,6 +1,6 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
-import Card from "../Card/Card"
+import Cardcashier from "../Cardcashier/Cardcashier"
 
 import api_cashier from "../../utils/cashier_data"
 
@@ -39,7 +39,7 @@ function Listcashier() {
                 <Sidebar />
                 <h1>List Cashier</h1>
                 {result.map(cashier => (
-                    <Card
+                    <Cardcashier
                     username={cashier.username}
                     email={cashier.email}
                     />

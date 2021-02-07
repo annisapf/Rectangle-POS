@@ -6,6 +6,7 @@ const schema = mongoose.Schema({
     sell_price: { type: Number, required: true},
     total_stock: { type: Number, required: true},
     tax: { type: Number, required: true},
+    mid: { type: String, required: true},
     created: { type: Date, default: Date.now}
 })
 

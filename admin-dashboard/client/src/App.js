@@ -7,7 +7,7 @@ import Register from "./components/Register/register";
 import Login from "./components/Login/login";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Addcashier from "./components/Addcashier/Addcashier";
-import Addproduct from "./components/pages/Addproduct/Addproduct";
+import Addproduct from "./components/Addproduct/Addproduct";
 import User from "./components/pages/User/User";
 import Listcashier from "./components/Listcashier/Listcashier"
 import Listproduct from "./components/Listproduct/Listproduct"
