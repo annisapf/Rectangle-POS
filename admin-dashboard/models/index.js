@@ -1,3 +1,4 @@
 module.exports = {
-    Cashier: require("./cashier")
+    Cashier: require("./cashier"),
+    Product: require("./product")
   };

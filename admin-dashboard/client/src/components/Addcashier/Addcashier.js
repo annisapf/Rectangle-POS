@@ -4,9 +4,9 @@ import { Input, FormBtn } from "../Form/Form"
 import "./style.css"
 
 import api_cashier from "../../utils/cashier_data";
-import { object } from "prop-types";
 
 function Addcashier() {
+
 
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -23,6 +23,7 @@ function Addcashier() {
         const { value } = event.target;
         console.log(value);
         setPassword(value)
+
     };
 
     function handleInputChangeEmail(event) {
@@ -59,6 +60,7 @@ function Addcashier() {
         )
     }
 
+
     return (
         <div className='container-fluid pl-0 m-0'>
             <Sidebar />
@@ -67,6 +69,7 @@ function Addcashier() {
                 <label>Username</label>
                
                 <Input onChange={handleInputChangeUsername} name="cashiername" value={username} placeholder="john"/>
+
                 <label>Email</label>
            
                 <Input onChange={handleInputChangeEmail} name="cashieremail" value={email} placeholder="john@email.com"/>

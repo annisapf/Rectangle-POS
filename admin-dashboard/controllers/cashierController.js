@@ -17,7 +17,7 @@ module.exports = {
     remove: function(req, res){
         var req_body = req.body;
         var cashier_id = req_body.cashier_id;
-        db.Cashier.remove(
+        db.Cashier.deleteOne(
             {"_id" :  cashier_id},
             function(err, obj)
             {

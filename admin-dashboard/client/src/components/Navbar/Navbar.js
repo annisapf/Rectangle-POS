@@ -16,6 +16,7 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
+
         const token = localStorage.usertoken;
         console.log(token);
         if (token) {
@@ -26,7 +27,6 @@ class Navbar extends Component {
                 email: decoded.email,
                 mid : decoded.mid
             })
-
         }
     }
 

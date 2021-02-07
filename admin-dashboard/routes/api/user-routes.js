@@ -62,7 +62,16 @@ router.post('/api/login', (req, res) => {
     })
         .then(response => {
             if (response) {
-                if (bcrypt.compareSync(req.body.password, response.password)) {
+                
+               console.log(req.body); 
+               console.log(response.password);
+
+               bcrypt.hash(req.body.password, 10, (err, hash) => {
+                    if (err) throw err;
+                    console.log(hash);
+               })
+
+               if (bcrypt.compareSync(req.body.password, response.password)) {
                     const payload = {
                         _id: response._id,
                         first_name: response.first_name,
@@ -73,6 +82,7 @@ router.post('/api/login', (req, res) => {
                         // 1 year in seconds
                         expiresIn: 31556926 
                     })
+
                     res.send({
                         token : token,
                         mid : payload._id,
@@ -85,9 +95,10 @@ router.post('/api/login', (req, res) => {
                 else {
                     res.status(400).json({ error: "User does not exist" });
                 }
+
             }
             else {
-                res.status(400).json({ error: "User does not exist" });
+                res.status(400).json({ error: "User does not exist 2" });
             }
         })
         .catch(err => {

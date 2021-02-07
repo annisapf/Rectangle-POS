@@ -1,0 +1,120 @@
+0 verbose cli [
+0 verbose cli   'C:\\Program Files\\nodejs\\node.exe',
+0 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+0 verbose cli   'exec',
+0 verbose cli   '--',
+0 verbose cli   'browserslist@latest',
+0 verbose cli   '--update-db'
+0 verbose cli ]
+1 info using npm@7.3.0
+2 info using node@v15.5.1
+3 timing config:load:defaults Completed in 3ms
+4 timing config:load:file:C:\Program Files\nodejs\node_modules\npm\npmrc Completed in 3ms
+5 timing config:load:builtin Completed in 3ms
+6 timing config:load:cli Completed in 6ms
+7 timing config:load:env Completed in 5ms
+8 timing config:load:file:C:\cygwin64\home\annisa\classes\Final-Project-POS\admin-dashboard\.npmrc Completed in 1ms
+9 timing config:load:project Completed in 3ms
+10 timing config:load:file:C:\cygwin64\home\apurb\.npmrc Completed in 0ms
+11 timing config:load:user Completed in 1ms
+12 timing config:load:file:C:\Users\apurb\AppData\Roaming\npm\etc\npmrc Completed in 1ms
+13 timing config:load:global Completed in 1ms
+14 timing config:load:cafile Completed in 1ms
+15 timing config:load:validate Completed in 3ms
+16 timing config:load:setUserAgent Completed in 1ms
+17 timing config:load:setEnvs Completed in 1ms
+18 timing config:load Completed in 28ms
+19 verbose npm-session 56fc7f92c5baf1c1
+20 timing npm:load Completed in 44ms
+21 http fetch GET 200 https://registry.npmjs.org/browserslist 371ms
+22 timing arborist:ctor Completed in 2ms
+23 timing arborist:ctor Completed in 1ms
+24 timing arborist:ctor Completed in 0ms
+25 timing arborist:ctor Completed in 0ms
+26 timing idealTree:init Completed in 11ms
+27 http fetch GET 304 https://registry.npmjs.org/browserslist 78ms (from cache)
+28 timing idealTree:userRequests Completed in 84ms
+29 silly idealTree buildDeps
+30 silly fetch manifest browserslist@4.16.3
+31 http fetch GET 304 https://registry.npmjs.org/browserslist 53ms (from cache)
+32 silly placeDep ROOT browserslist@4.16.3 OK for:  want: 4.16.3
+33 silly fetch manifest caniuse-lite@^1.0.30001181
+34 silly fetch manifest colorette@^1.2.1
+35 silly fetch manifest electron-to-chromium@^1.3.649
+36 silly fetch manifest escalade@^3.1.1
+37 silly fetch manifest node-releases@^1.1.70
+38 http fetch GET 200 https://registry.npmjs.org/colorette 253ms
+39 http fetch GET 200 https://registry.npmjs.org/escalade 295ms
+40 http fetch GET 200 https://registry.npmjs.org/caniuse-lite 447ms
+41 http fetch GET 200 https://registry.npmjs.org/node-releases 748ms
+42 http fetch GET 200 https://registry.npmjs.org/electron-to-chromium 763ms
+43 timing idealTree:#root Completed in 848ms
+44 silly placeDep ROOT caniuse-lite@1.0.30001183 OK for: browserslist@4.16.3 want: ^1.0.30001181
+45 silly placeDep ROOT colorette@1.2.1 OK for: browserslist@4.16.3 want: ^1.2.1
+46 silly placeDep ROOT electron-to-chromium@1.3.653 OK for: browserslist@4.16.3 want: ^1.3.649
+47 silly placeDep ROOT escalade@3.1.1 OK for: browserslist@4.16.3 want: ^3.1.1
+48 silly placeDep ROOT node-releases@1.1.70 OK for: browserslist@4.16.3 want: ^1.1.70
+49 timing idealTree:node_modules/browserslist Completed in 15ms
+50 timing idealTree:node_modules/caniuse-lite Completed in 0ms
+51 timing idealTree:node_modules/colorette Completed in 0ms
+52 timing idealTree:node_modules/electron-to-chromium Completed in 0ms
+53 timing idealTree:node_modules/escalade Completed in 0ms
+54 timing idealTree:node_modules/node-releases Completed in 0ms
+55 timing idealTree:buildDeps Completed in 867ms
+56 timing idealTree:fixDepFlags Completed in 1ms
+57 timing idealTree Completed in 970ms
+58 timing reify:loadTrees Completed in 970ms
+59 timing reify:diffTrees Completed in 3ms
+60 silly reify moves {}
+61 timing reify:retireShallow Completed in 1ms
+62 timing reify:createSparse Completed in 11ms
+63 timing reify:loadBundles Completed in 0ms
+64 silly tarball no local data for node-releases@https://registry.npmjs.org/node-releases/-/node-releases-1.1.70.tgz. Extracting by manifest.
+65 silly tarball no local data for escalade@https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz. Extracting by manifest.
+66 silly tarball no local data for electron-to-chromium@https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.653.tgz. Extracting by manifest.
+67 silly tarball no local data for colorette@https://registry.npmjs.org/colorette/-/colorette-1.2.1.tgz. Extracting by manifest.
+68 silly tarball no local data for caniuse-lite@https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001183.tgz. Extracting by manifest.
+69 silly tarball no local data for browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.16.3.tgz. Extracting by manifest.
+70 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 463ms
+71 timing auditReport:getReport Completed in 468ms
+72 timing auditReport:init Completed in 0ms
+73 timing reify:audit Completed in 470ms
+74 http fetch GET 200 https://registry.npmjs.org/colorette/-/colorette-1.2.1.tgz 430ms
+75 timing reifyNode:node_modules/colorette Completed in 481ms
+76 http fetch GET 200 https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz 453ms
+77 timing reifyNode:node_modules/escalade Completed in 492ms
+78 http fetch GET 200 https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.3.653.tgz 521ms
+79 timing reifyNode:node_modules/electron-to-chromium Completed in 567ms
+80 http fetch GET 200 https://registry.npmjs.org/node-releases/-/node-releases-1.1.70.tgz 688ms
+81 timing reifyNode:node_modules/node-releases Completed in 713ms
+82 http fetch GET 200 https://registry.npmjs.org/browserslist/-/browserslist-4.16.3.tgz 697ms
+83 timing reifyNode:node_modules/browserslist Completed in 768ms
+84 http fetch GET 200 https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001183.tgz 4337ms
+85 timing reifyNode:node_modules/caniuse-lite Completed in 4401ms
+86 timing reify:unpack Completed in 4402ms
+87 timing reify:unretire Completed in 1ms
+88 timing build:queue Completed in 3ms
+89 timing build:link:node_modules/browserslist Completed in 17ms
+90 timing build:link Completed in 18ms
+91 timing build:deps Completed in 23ms
+92 timing build Completed in 23ms
+93 timing reify:build Completed in 24ms
+94 timing reify:trash Completed in 0ms
+95 timing reify:save Completed in 19ms
+96 timing reify Completed in 5465ms
+97 timing command:exec Completed in 31170ms
+98 verbose stack Error: command failed
+98 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\@npmcli\promise-spawn\index.js:64:27)
+98 verbose stack     at ChildProcess.emit (node:events:376:20)
+98 verbose stack     at maybeClose (node:internal/child_process:1063:16)
+98 verbose stack     at Process.ChildProcess._handle.onexit (node:internal/child_process:295:5)
+99 verbose cwd C:\cygwin64\home\annisa\classes\Final-Project-POS\admin-dashboard
+100 verbose Windows_NT 10.0.19041
+101 verbose argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "exec" "--" "browserslist@latest" "--update-db"
+102 verbose node v15.5.1
+103 verbose npm  v7.3.0
+104 error code 1
+105 error path C:\cygwin64\home\annisa\classes\Final-Project-POS\admin-dashboard
+106 error command failed
+107 error command C:\Windows\system32\cmd.exe /d /s /c browserslist --update-db
+108 verbose exit 1
