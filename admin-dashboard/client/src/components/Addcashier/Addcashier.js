@@ -8,63 +8,76 @@ import { object } from "prop-types";
 
 function Addcashier() {
 
-    const [addcashierState, setAddcashierState] = useState({
-        username: "annisa",
-        email: "a.purbandari@gmail.com",
-        password: ""
-    });
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+        
 
-    useEffect(() => {
-        var cashierListPromise = api_cashier.getCashier();
-        cashierListPromise
-        .then((res) => {
-            //setAddcashierState(addcashierState);
-            console.log(res);
-        });
-    }, [setAddcashierState]);
+    function handleInputChangeUsername(event) {
+        const { value } = event.target;
+        console.log(value);
+        setUsername(value)
+    };
 
-    // var cashierListPromise = api_cashier.getCashier();
-    // cashierListPromise
-    // .then(
-    //     function(response)
-    //     {
-    //         console.log(response.data);
-    //     }
-    // )
-    // .catch(
-    //     function(err)
-    //     {
-    //         console.log(err)
-    //     }
-    // )
+    function handleInputChangePassword(event) {
+        const { value } = event.target;
+        console.log(value);
+        setPassword(value)
+    };
 
+    function handleInputChangeEmail(event) {
+        const { value } = event.target;
+        console.log(value);
+        setEmail(value)
+    };
 
-    // function handleInputChange(event) {
-    //     const { value } = event.target;
-    //     // console.log(value);
-    //     setAddcashier(value)
-    //   };
-    
+    function clickSubmitCashier(event)
+    {
+        var cashier_data = {
+            username : username,
+            email : email,
+            password: password,
+            mid : localStorage.mid
+        }
+
+        console.log(cashier_data);
+        var cashierListPromise = api_cashier.addCashier(cashier_data);
+
+        console.log( cashierListPromise );
+
+        cashierListPromise.then(
+            function(response)
+            {
+                console.log(response.data)
+                window.location = "/listcashier"
+            }
+        ).catch(
+            function(err)
+            {
+                console.log(err);
+            }
+        )
+    }
 
     return (
         <div className='container-fluid pl-0 m-0'>
             <Sidebar />
             <h1>Add Cashier</h1>
-             <form className="col-md-4 mb-3">
+             <div className="cashierform col-md-4 mb-3">
                 <label>Username</label>
                
-                <Input onChange="" name="cashiername" value="" placeholder="john"/>
+                <Input onChange={handleInputChangeUsername} name="cashiername" value={username} placeholder="john"/>
                 <label>Email</label>
            
-                <Input onChange="" name="cashieremail" value="" placeholder="john@email.com"/>
+                <Input onChange={handleInputChangeEmail} name="cashieremail" value={email} placeholder="john@email.com"/>
                         
                 <label>Password</label> 
-                <Input onChange="" name="cashierpassword" value="" placeholder="password"/>
+                <Input onChange={handleInputChangePassword} name="cashierpassword" value={password} placeholder="password"/>
                  
-                <FormBtn onClick="">
+                <FormBtn onClick={clickSubmitCashier}>
                 Add
                 </FormBtn> 
-            </form> 
+            </div> 
          
         </div>
     )

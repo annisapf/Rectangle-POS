@@ -24,7 +24,8 @@ class Login extends Component {
         }
         loginUser(user).then(res => {
             if(res) {
-                this.props.history.push('/dashboard');
+                //this.props.history.push('/dashboard');
+                window.location = "/dashboard";
             }
             else {
                 console.log("Incorrect email or password");

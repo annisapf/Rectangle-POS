@@ -24,7 +24,18 @@ export const loginUser = userData => {
         password: userData.password
     })
     .then(res => {
-        localStorage.setItem('usertoken', res.data);
+        console.log(res.data);
+        var usertoken = res.data.token;
+        var email = res.data.email;
+        var first_name = res.data.first_name;
+        var last_name = res.data.last_name;
+        var mid = res.data.mid;
+        localStorage.setItem('usertoken', usertoken);
+        localStorage.setItem('email', email);
+        localStorage.setItem('mid', mid);
+        localStorage.setItem('first_name', first_name);
+        localStorage.setItem('last_name', last_name);
+        localStorage.setItem('all_user_data' , JSON.stringify(res.data))
         return res.data;
     })
     .catch(err => {

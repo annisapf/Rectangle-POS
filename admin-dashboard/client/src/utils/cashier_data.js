@@ -1,11 +1,13 @@
 import axios from "axios";
 
-export function addCashier(cashierData){
-    return axios.get("/api/cashier/add", cashierData);
+function addCashier(cashierData){
+    return axios.post("/api/cashier/add", cashierData);
 };
 
-function getCashier(){
-    return axios.get("/api/cashier/get-all");
+function getCashier(merchantData){
+    console.log("getCashier")
+    console.log(merchantData)
+    return axios.post("/api/cashier/get-all", merchantData);
 };
 
 const api_cashier = {

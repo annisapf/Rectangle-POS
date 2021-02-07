@@ -12,7 +12,7 @@ router.post('/api/cashier/add',
 });
 
 
-router.get('/api/cashier/get-all',
+router.post('/api/cashier/get-all',
     function (req, res)  {
         console.log (cashierController);
         console.log (req.body);
