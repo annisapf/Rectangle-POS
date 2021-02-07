@@ -8,6 +8,10 @@ import Login from "./components/Login/login";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import Addcashier from "./components/Addcashier/Addcashier";
 import Addproduct from "./components/pages/Addproduct/Addproduct";
+import User from "./components/pages/User/User";
+import Listcashier from "./components/Listcashier/Listcashier"
+import Listproduct from "./components/Listproduct/Listproduct"
+import Transaction from "./components/Transaction/Transaction"
 
 import "./App.css";
 
@@ -23,12 +27,16 @@ class App extends Component {
                     <div className="container-fluid pl-0 pr-0 m-0">
                         <Navbar />
                         <Route exact path="/" component={Landing} />
-                        <div className='container-fluid m-0 p-0'>
+                        <div>
                             <Route exact path="/register" component={Register} />
                             <Route exact path="/login" component={Login} />
                             <Route exact path="/addcashier" component={Addcashier} />
+                            <Route exact path="/listcashier" component={Listcashier} />
                             <Route exact path="/dashboard" component={Auth(Dashboard)} />
                             <Route exact path="/addproduct" component={Addproduct} />
+                            <Route exact path="/listproduct" component={Listproduct} />
+                            <Route exact path="/transaction" component={Transaction} />
+                            <Route exact path="/userprofile" component={Auth(User)}/>
                         </div>
                     </div>
                 </Router>

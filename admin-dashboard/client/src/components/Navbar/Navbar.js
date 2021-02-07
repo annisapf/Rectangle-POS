@@ -1,11 +1,45 @@
 import React, { Component } from "react";
+import jwt_decode from 'jwt-decode';
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
+import { json } from "body-parser";
 
 class Navbar extends Component {
+    constructor() {
+        super()
+        this.state = {
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: ''
+        }
+    }
+
+    componentDidMount() {
+
+        const token = localStorage.usertoken;
+        console.log(token);
+        if (token) {
+            const decoded = jwt_decode(token);   
+            this.setState({
+                first_name: decoded.first_name,
+                last_name: decoded.last_name,
+                email: decoded.email,
+                mid : decoded.mid
+            })
+        }
+    }
+
+
     logOut(e) {
         e.preventDefault();
         localStorage.removeItem('usertoken');
+        localStorage.removeItem('email');
+        localStorage.removeItem('mid');
+        localStorage.removeItem('first_name');
+        localStorage.removeItem('last_name');
+        localStorage.removeItem('all_user_data')
+        this.setState({});
         this.props.history.push('/');
     }
     render() {
@@ -25,7 +59,11 @@ class Navbar extends Component {
         )
         const userLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
-              
+                <li>
+                    <Link className='btn btn-sm active mr-1 mb-1' to='/userprofile'>
+                    <i class="far fa-smile-wink"></i> <space></space>{this.state.first_name}
+                    </Link>
+                </li>
                 <li>
                     {/* <a href="/" rel='noopener noreferrer' onClick={this.logOut.bind(this)}>
                         Logout
