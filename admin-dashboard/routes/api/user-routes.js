@@ -82,10 +82,20 @@ router.post('/api/login', (req, res) => {
                         // 1 year in seconds
                         expiresIn: 31556926 
                     })
-                    res.send(token)
-               }else {
-                    res.status(400).json({ error: "User does not exist 1" });
-               }
+
+                    res.send({
+                        token : token,
+                        mid : payload._id,
+                        first_name : payload.first_name,
+                        last_name : payload.last_name,
+                        email : payload.email
+                    })
+                        
+                }
+                else {
+                    res.status(400).json({ error: "User does not exist" });
+                }
+
             }
             else {
                 res.status(400).json({ error: "User does not exist 2" });

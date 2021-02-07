@@ -13,8 +13,10 @@ function Listcashier() {
     }, [setResult]);
 
     function loadCashiers(){
-    
-        var cashierListPromise = api_cashier.getCashier();
+        var merchantData = {
+            mid : localStorage.mid
+        }
+        var cashierListPromise = api_cashier.getCashier(merchantData);
         cashierListPromise
         .then(
             function(response)

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import jwt_decode from 'jwt-decode';
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
+import { json } from "body-parser";
 
 class Navbar extends Component {
     constructor() {
@@ -15,13 +16,16 @@ class Navbar extends Component {
     }
 
     componentDidMount() {
-      const token = localStorage.getItem('usertoken');
+
+        const token = localStorage.usertoken;
+        console.log(token);
         if (token) {
-            const decoded = jwt_decode(token);
+            const decoded = jwt_decode(token);   
             this.setState({
                 first_name: decoded.first_name,
                 last_name: decoded.last_name,
-                email: decoded.email
+                email: decoded.email,
+                mid : decoded.mid
             })
         }
     }
@@ -30,6 +34,12 @@ class Navbar extends Component {
     logOut(e) {
         e.preventDefault();
         localStorage.removeItem('usertoken');
+        localStorage.removeItem('email');
+        localStorage.removeItem('mid');
+        localStorage.removeItem('first_name');
+        localStorage.removeItem('last_name');
+        localStorage.removeItem('all_user_data')
+        this.setState({});
         this.props.history.push('/');
     }
     render() {
