@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
 import { Input, FormBtn } from "../Form/Form"
 import "./style.css"

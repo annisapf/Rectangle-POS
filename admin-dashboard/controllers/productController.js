@@ -44,6 +44,8 @@ module.exports = {
     create: function(req, res) {
         var req_body = req.body;
         db.Product.insertMany(req_body);
+        console.log("------------------------")
+        console.log(req_body)
         res.send({
             "message" : req_body.name + " successfully added"
         })

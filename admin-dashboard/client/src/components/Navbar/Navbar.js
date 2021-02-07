@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import jwt_decode from 'jwt-decode';
 import { Link, withRouter } from "react-router-dom";
 import "./style.css";
-import { json } from "body-parser";
 
 class Navbar extends Component {
     constructor() {
