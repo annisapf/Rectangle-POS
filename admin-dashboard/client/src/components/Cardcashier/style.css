@@ -1,35 +1,63 @@
-.card {
-    background: #fff;
-    height: 55px;
-    margin-left: 30%;
-    width: 55px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  }
+* {
+	box-sizing: border-box;
+}
 
-  .card > .content {
-    padding-top: 5%;
-    padding-right: 6rem;
-    font-size: 15px;
-  }
-  
-  .card > .content > ul {
-    list-style-type: none;
-  }
-  
-  .card > .content > ul > li {
-    margin-top: 18px;
-  }
-  
-  .card > .remove {
-    color: #ff1744;
-    font-size: 48px;
-    position: absolute;
-    top: -20px;
-    right: 5px;
+.wrapper {
+    margin-left: 30%;
+	font-family: Montserrat;
+	width: 260px;
+    height: 150px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.outer {
+	position: relative;
+	height: 300px;
+	width: 280px;
+    padding: 25px;
+
+}
+
+
+.content {
+	animation-delay: 0.3s;
+	position: absolute;
+	left: 20px;
+	z-index: 3
+}
+
+h1 {
+	color: #111;
+}
+
+p {
+	width: 280px;
+	font-size: 13px;
+	
+	color: #aaa;
+	
+}
+
+.bg {
+	display: inline-block;
+	color: #fff;
+	background: cornflowerblue;
+
+	border-radius: 50px;
+	font-size: .7em;
+}
+
+
+.delete {
+    background-color: red;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+    color: #eee;
     cursor: pointer;
-  }
-  
-  .card > .remove:hover {
-    color: #d50000;
+    font-size: 14px;
+
+    text-align: center;
+    width: 20%;
   }
   

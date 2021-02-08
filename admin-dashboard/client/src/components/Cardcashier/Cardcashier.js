@@ -1,22 +1,23 @@
 import React from "react";
-import "./style.css";
+import "./style.css"
 
 function CardCashier(props) {
   return (
-    <div className="card">
-      <div className="content">
-        <ul>
-          <li>
-            <strong>Username:</strong> {props.username}
-          </li>
-          <li>
-            <strong>Email:</strong> {props.email}
-          </li>
-        </ul>
-      </div>
-      <span onClick={() => props.removeCashier(props.id)} className="remove">
-        𝘅
-      </span>
+
+    <div className="wrapper">
+	    <div className="outer">
+		    <div class="content animated fadeInLeft">
+			    <p>Email: {props.email}</p>
+			  
+			    <p>Username: {props.username}</p>
+			
+			  <button className="delete" oncClick={() => props.removeCashier(props.id)}>Delete</button>
+			
+		    </div>
+
+		 
+	    </div>
+
     </div>
   );
 }

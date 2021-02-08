@@ -10,6 +10,9 @@ const dotenv = require("dotenv");
 const path = require('path');
 const multer = require('multer');
 
+const upload = multer({ dest: 'uploads/' })
+
+
 const form = multer();
 
 dotenv.config();
@@ -34,6 +37,12 @@ app.use(
   })
 );
 app.use(cors());
+
+app.post('/profile', upload.single('avatar'), 
+    function (req, res, next) {
+
+  })
+  
 
 app.use(express.static("public"));
 app.use("/upload",express.static("upload"));
