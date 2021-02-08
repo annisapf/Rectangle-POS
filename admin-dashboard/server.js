@@ -7,6 +7,10 @@ const routes = require("./routes");
 const passport = require("passport");
 const app = express();
 const dotenv = require("dotenv");
+const path = require('path');
+const multer = require('multer');
+
+const form = multer();
 
 dotenv.config();
 
@@ -23,17 +27,19 @@ if (process.env.NODE_ENV === "production") {
 
 // Bodyparser middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(form.array());
 app.use(
-    bodyParser.urlencoded({
-        extended: false
-    })
+  bodyParser.urlencoded({
+      extended: false
+  })
 );
+app.use(cors());
 
 app.use(express.static("public"));
+app.use("/upload",express.static("upload"));
 // DB Config
 const MONGODB_URI = ""
-const mongoURI = "mongodb+srv://trilogy:trilogy@cluster0.u8m9s.mongodb.net/mernlogin?retryWrites=true&w=majority";
+const mongoURI = "";
 
 // Connect to MongoDB
 mongoose.connect( MONGODB_URI|| "mongodb://localhost:27017/posrectangle", {

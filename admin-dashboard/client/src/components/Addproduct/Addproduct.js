@@ -54,6 +54,10 @@ function Addproduct() {
         setTax(value)
     };
 
+    function onChangeHandlerImage(event) {
+        console.log(event.target.files[0])
+    }
+
     function clickSubmitProduct(event)
     {
         var product_data = {
@@ -90,29 +94,53 @@ function Addproduct() {
         <div className='container-fluid pl-0 m-0'>
             <Sidebar />
             <h1>Add Product</h1>
-            <div className="productform col-md-4 mb-3">
-                <label>Product Name</label>
-                <Input onChange={handleInputChangeName} name="productname" value={name} placeholder="coffee"/>
+            <div className="productform">
 
+                
+                <div className="title">Add a product</div>
+                <div className="subtitle">Let's add a product</div>
 
-                <label>Product Description</label>
-                <Input onChange={handleInputChangeDescription} name="productname" value={description} placeholder="greatest beverage"/>
+                     <div className=" input-container">
+                        <label>Product Name</label>
+                        <Input onChange={handleInputChangeName} name="productname" className="input" value={name} placeholder="coffee"/>
+                    </div>
 
-                <label>Product Base Price</label> 
-                <Input onChange={handleInputChangeBaseprice} name="productemail" value={base_price} placeholder="10"/>
-                        
-                <label>Product Sell Price</label> 
-                <Input onChange={handleInputChangeSellprice} name="productpassword" value={sell_price} placeholder="12"/>
-                 
-                <label>Product Total Stock</label> 
-                <Input onChange={handleInputChangeTotalstock} name="productpassword" value={total_stock} placeholder="100"/>
-                 
-                <label>Product Tax</label> 
-                <Input onChange={handleInputChangeTax} name="productpassword" value={tax} placeholder="2.5"/>
-                 
-                <FormBtn onClick={clickSubmitProduct}>
-                Add
-                </FormBtn>
+                    <div className="input-container">
+                        <label>Product Description</label>
+                        <Input onChange={handleInputChangeDescription} name="productname" className="input" value={description} placeholder="greatest beverage"/>
+                    </div>
+
+                    <div className="input-container">
+                        <label>Product Base Price</label> 
+                        <Input onChange={handleInputChangeBaseprice} name="productemail"  className="input" value={base_price} placeholder="10"/>
+                    </div>
+
+                    <div className="input-container">
+                        <label>Product Sell Price</label> 
+                        <Input onChange={handleInputChangeSellprice} name="productpassword"  className="input" value={sell_price} placeholder="12"/>
+                    </div>
+
+                    <div className="input-container">
+                        <label>Product Total Stock</label> 
+                        <Input onChange={handleInputChangeTotalstock} name="productpassword"  className="input" value={total_stock} placeholder="100"/>
+                    </div>
+
+                    <div className="input-container">
+                        <label>Product Tax</label> 
+                        <Input onChange={handleInputChangeTax} name="productpassword" className="input" value={tax} placeholder="2.5"/>
+                    </div>
+
+                    <div className="input-container">
+                        <label>Product Image</label>
+                        <Input onChange={onChangeHandlerImage} className="input" type="file" name="productimage" value=""/>
+                    </div>
+
+                    <div className="input-container">
+                        <FormBtn onClick={clickSubmitProduct}>
+                        Add
+                        </FormBtn>
+                    </div>
+
             </div>
          
         </div>

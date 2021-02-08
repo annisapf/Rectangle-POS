@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Cardcashier(props) {
+function CardCashier(props) {
   return (
     <div className="card">
       <div className="content">
@@ -21,4 +21,4 @@ function Cardcashier(props) {
   );
 }
 
-export default Cardcashier;
+export default CardCashier;
