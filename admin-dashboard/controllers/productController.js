@@ -43,6 +43,9 @@ module.exports = {
 
     create: function(req, res) {
         var req_body = req.body;
+
+        // write the file to the /upload folder
+
         db.Product.insertMany(req_body);
         console.log("------------------------")
         console.log(req_body)

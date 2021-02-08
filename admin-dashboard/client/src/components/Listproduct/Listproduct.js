@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
-import Cardproduct from "../Cardproduct/Cardproduct"
+import CardProduct from "../CardProduct/CardProduct"
 
 import api_product from "../../utils/product_data"
 
 function Listproduct() {
 
     const [productresult, setProductresult] = useState([]);
+    // const [image_display, setImage] = userState(
+    //     "http://localhost:5001/client/src/assets/productimage/coffee.jpg")
 
     useEffect(() => {
         loadProduct()
@@ -38,8 +40,9 @@ function Listproduct() {
             <div>
                 <Sidebar />
                 <h1>List Product</h1>
+                
                 {productresult.map(product => (
-                    <Cardproduct
+                    <CardProduct
                     name={product.name}
                     description={product.description}
                     base_price = {product.base_price}

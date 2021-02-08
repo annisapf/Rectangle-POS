@@ -65,22 +65,34 @@ function Addcashier() {
         <div className='container-fluid pl-0 m-0'>
             <Sidebar />
             <h1>Add Cashier</h1>
-             <div className="cashierform col-md-4 mb-3">
-                <label>Username</label>
-               
-                <Input onChange={handleInputChangeUsername} name="cashiername" value={username} placeholder="john"/>
+             <div className="cashierform">
+        
+                <div className="title">Add a cashier</div>
+                <div className="subtitle">Let's add a cashier account</div>
+                   
+                   <div className=" input-container">
+                        <label for="username">Username</label>
+                        <Input onChange={handleInputChangeUsername} id="name" className="input" name="cashiername" value={username} placeholder="john"/>
+                    </div>        
 
-                <label>Email</label>
-           
-                <Input onChange={handleInputChangeEmail} name="cashieremail" value={email} placeholder="john@email.com"/>
-                        
-                <label>Password</label> 
-                <Input onChange={handleInputChangePassword} name="cashierpassword" value={password} placeholder="password"/>
-                 
-                <FormBtn onClick={clickSubmitCashier}>
-                Add
-                </FormBtn> 
+                    <div className=" input-container">    
+                        <label>Email</label>
+                        <Input onChange={handleInputChangeEmail} className="input" name="cashieremail" value={email} placeholder="john@email.com"/>
+                    </div>
+
+                    <div className="input-container">
+                        <label>Password</label> 
+                        <Input onChange={handleInputChangePassword} className="input" name="cashierpassword" value={password} placeholder="password"/>
+                    </div>
+
+                    <div className="input-container">
+                        <FormBtn onClick={clickSubmitCashier} className="submit">
+                        Add
+                        </FormBtn> 
+                    </div>
+
             </div> 
+
          
         </div>
     )

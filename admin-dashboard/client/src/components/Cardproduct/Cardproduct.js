@@ -1,11 +1,14 @@
 import React from "react";
 import "./style.css";
 
-function Cardproduct(props) {
+function CardProduct(props) {
   return (
     <div className="card">
       <div className="content">
         <ul>
+            <li>
+            <img src="http://localhost:5001/upload/coffee.jpg" width="250" height="120"/>
+            </li>
           <li>
             <strong>Name</strong> {props.name}
           </li>
@@ -33,4 +36,4 @@ function Cardproduct(props) {
   );
 }
 
-export default Cardproduct;
+export default CardProduct;
