@@ -43,6 +43,7 @@ function Listproduct() {
                 
                 {productresult.map(product => (
                     <CardProduct
+                    image={product.image}
                     name={product.name}
                     description={product.description}
                     base_price = {product.base_price}

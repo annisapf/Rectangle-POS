@@ -13,6 +13,7 @@ function Addproduct() {
     const [sell_price, setSellprice] = useState("");
     const [total_stock, setTotalstock] = useState("");
     const [tax, setTax] = useState("");
+    const [image_file, setImage] = useState("");
     
     function handleInputChangeName(event) {
         const { value } = event.target;
@@ -55,23 +56,34 @@ function Addproduct() {
     };
 
     function onChangeHandlerImage(event) {
+        const { value } = event.target;
         console.log(event.target.files[0])
+        setImage(value)
     }
 
     function clickSubmitProduct(event)
     {
-        var product_data = {
-            name: name,
-            description : description,
-            base_price : base_price,
-            sell_price: sell_price,
-            total_stock : total_stock,
-            tax : tax,
-            mid : localStorage.mid
-        }
+        var formData = new FormData();
+        var image_upload = document.querySelector("#file_id").files[0];
 
-        console.log(product_data);
-        var productListPromise = api_product.addProduct(product_data);
+        console.log("-------------------imagefile--------------------------")
+        console.log(image_upload);
+        console.log("---------------------------------------------")
+
+        
+
+        formData.append("image", image_upload);
+        formData.append("name", name);
+        formData.append("description",description);
+        formData.append("base_price", base_price);
+        formData.append("sell_price", sell_price);
+        formData.append("total_stock", total_stock);
+        formData.append("mid", localStorage.mid);
+        formData.append("tax", tax);
+
+        //console.log(product_data);
+        //var productListPromise = api_product.addProduct(product_data);
+        var productListPromise = api_product.addProduct(formData);
 
         console.log( productListPromise );
 
@@ -79,11 +91,12 @@ function Addproduct() {
             function(response)
             {
                 console.log(response.data)
-                // window.location = "/listproduct"
+                window.location = "/listproduct"
             }
         ).catch(
             function(err)
             {
+                
                 console.log(err);
             }
         )
@@ -132,7 +145,7 @@ function Addproduct() {
 
                     <div className="input-container">
                         <label>Product Image</label>
-                        <Input onChange={onChangeHandlerImage} className="input" type="file" name="productimage" value=""/>
+                        <Input onChange={onChangeHandlerImage} className="input" type="file" name="file" id="file_id" value={image_file}/>
                     </div>
 
                     <div className="input-container">
