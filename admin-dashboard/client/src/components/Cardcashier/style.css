@@ -33,7 +33,6 @@ h1 {
 p {
 	width: 280px;
 	font-size: 13px;
-	
 	color: #aaa;
 	
 }
@@ -51,12 +50,10 @@ p {
 .delete {
     background-color: red;
     border-radius: 12px;
-
     box-sizing: border-box;
     color: #eee;
     cursor: pointer;
-    font-size: 14px;
-
+    font-size: 12px;
     text-align: center;
     width: 20%;
   }
