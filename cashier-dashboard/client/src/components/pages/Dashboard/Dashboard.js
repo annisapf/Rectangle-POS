@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import jwt_decode from 'jwt-decode';
-import Sidebar from "../../Sidebar/Sidebar";
 
+import Receipt from "../../Receipt/Receipt"
+import Shoppingcart from "../../../components/Shoppingcart/Shoppingcart"
 
 class DashBoard extends Component {
     constructor() {
@@ -25,12 +25,12 @@ class DashBoard extends Component {
     render() {
         return (
             <div className="container-fluid pl-0">
-                    <Sidebar />
+                    <Receipt/>
                     <div>
                         <h1>
                              Welcome { this.state.username }
                         </h1>
-               
+                        <Shoppingcart/>
                        
                     </div>
             </div>
