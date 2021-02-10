@@ -1,7 +1,7 @@
 {
-  "name": "cashier-dashboard",
+  "name": "",
   "version": "1.0.0",
-  "description": "Cashier dashboard with shopping cart and print receipt",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,37 +16,34 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/annisapf/Rectangle-POS.git"
+    "url": ""
   },
-  "keywords": [
-    "React",
-    "Node"
-  ],
-  "author": "Annisa Purbandari",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/annisapf/Rectangle-POS/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/annisapf/Rectangle-POS#readme",
+  "homepage": "",
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.4"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "concurrently": "^5.3.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.20",
-    "mongodb": "^3.6.4",
-    "mongoose": "^5.11.15",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.9",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "path": "^0.12.7",
-    "validator": "^13.5.2"
+    "validator": "^13.0.0"
   }
 }

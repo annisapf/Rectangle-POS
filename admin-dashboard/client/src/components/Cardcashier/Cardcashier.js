@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css"
 
-function CardCashier(props) {
+function Cardcashier(props) {
   return (
 
     <div className="wrapper">
@@ -22,4 +22,4 @@ function CardCashier(props) {
   );
 }
 
-export default CardCashier;
+export default Cardcashier;
