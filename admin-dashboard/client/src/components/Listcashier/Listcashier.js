@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
-import CardCashier from "../CardCashier/CardCashier"
+import CardCashier from "../CardCashier/Cardcashier"
 
 import api_cashier from "../../utils/cashier_data"
 

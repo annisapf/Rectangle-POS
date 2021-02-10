@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar"
-import CardProduct from "../CardProduct/CardProduct"
+import CardProduct from "../CardProduct/Cardproduct"
 
 import api_product from "../../utils/product_data"
 

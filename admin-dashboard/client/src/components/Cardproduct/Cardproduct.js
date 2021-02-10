@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function CardProduct(props) {
+function Cardproduct(props) {
   return (
     <div className="card">
       <div className="content">
@@ -36,4 +36,4 @@ function CardProduct(props) {
   );
 }
 
-export default CardProduct;
+export default Cardproduct;
