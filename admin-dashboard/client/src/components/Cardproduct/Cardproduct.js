@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css"
 
 
-function CardProduct(props) {
+function Cardproduct(props) {
 
   return (
 

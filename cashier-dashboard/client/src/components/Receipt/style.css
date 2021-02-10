@@ -1,12 +1,8 @@
 aside
 {
     position: absolute;
-    height: 100%;
-    top: 0;
+    height: auto;
+    width: min-content;
     left: 0;
     border: 1px solid #111;
-}
-
-.sidebar {
-    background-color:#0B5563;
 }
