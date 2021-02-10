@@ -9,8 +9,22 @@ const app = express();
 const dotenv = require("dotenv");
 const path = require('path');
 const multer = require('multer');
+const productController = require("./controllers/productController");
 
-const form = multer();
+//const upload = multer({ dest: 'uploads/' })
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'upload')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname )
+  }
+})
+
+var upload = multer({ storage: storage })
+console.log(upload);
+
+console.log("-------------------------------------------------")
 
 dotenv.config();
 
@@ -27,13 +41,23 @@ if (process.env.NODE_ENV === "production") {
 
 // Bodyparser middleware
 app.use(bodyParser.json());
-app.use(form.array());
+console.log("-------------------------------------------------")
+//app.use(upload.array());
 app.use(
   bodyParser.urlencoded({
       extended: false
   })
 );
 app.use(cors());
+
+app.post('/api/product/add', upload.single('image'), 
+    function (req, res, next) {
+        console.log(req.file);
+        console.log(req.body);
+        productController.create(req, res);
+ 
+  })
+  
 
 app.use(express.static("public"));
 app.use("/upload",express.static("upload"));

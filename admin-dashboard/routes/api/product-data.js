@@ -1,10 +1,14 @@
 const router = require("express").Router();
 const productController = require("../../controllers/productController");
 
+
 router.post('/api/product/add',
     function(req,res) {
-        console.log(productController);
+        console.log("---------- /api/product/add ----------");
         console.log(req);
+        console.log("---------- /api/product/add ----------");
+        console.log(productController);
+       
 
         productController.create(req, res);
     }
@@ -43,5 +47,7 @@ router.post('/upload',
         productController.create(req, res);
     
 })
+
+
 
 module.exports = router;

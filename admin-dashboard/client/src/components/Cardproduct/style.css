@@ -1,35 +1,111 @@
-.card {
-    background: #fff;
-    height: 285px;
-    margin-left: 30%;
-    width: 285px;
-    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  }
+* {
+	box-sizing: border-box;
+}
 
-  .card > .content {
-    padding-top: 5%;
-    padding-right: 6rem;
-    font-size: 15px;
-  }
-  
-  .card > .content > ul {
-    list-style-type: none;
-  }
-  
-  .card > .content > ul > li {
-    margin-top: 18px;
-  }
-  
-  .card > .remove {
-    color: #ff1744;
-    font-size: 48px;
-    position: absolute;
-    top: -20px;
-    right: 5px;
-    cursor: pointer;
-  }
-  
-  .card > .remove:hover {
-    color: #d50000;
-  }
-  
+.wrapper-product {
+    margin-left: 30%;
+	justify-content: center;
+	align-items: center;
+	font-family: Montserrat;
+	width: 600px;
+	height: 330px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.outer-product {
+	position: relative;
+	
+	height: 250px;
+	width: 550px;
+
+	align-items: center;
+}
+
+img {
+	position: absolute;
+	top: 0px;
+	right: -30px;
+
+	animation-delay: 0.5s;
+}
+
+.content-product {
+	animation-delay: 0.3s;
+	position: absolute;
+	left: 20px;
+	z-index: 3
+	
+}
+
+p {
+	width: 250px;
+	font-size: 13px;
+	color: #aaa;
+}
+
+.bg-product {
+	display: inline-block;
+	color: #fff;
+	background: cornflowerblue;
+	padding: 5px 10px;
+	border-radius: 50px;
+	font-size: .7em;
+}
+.button {
+	width: fit-content;
+	height: fit-content;
+	margin-top: 10px;
+}
+
+.button a {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	font-size: 11px;
+	color: black;
+	text-decoration: none;
+	padding: 10px 15px;
+	border: 1px solid #aaa;
+	font-weight: bold;
+}
+
+.button a:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -10px;
+	width: 0%;
+	background: rgb(219, 61, 61);
+	height: 100%;
+	z-index: -1;
+	transition: width 0.3s ease-in-out;
+	transform: skew(-25deg);
+	transform-origin: right;
+}
+
+.button a:hover:after {
+	width: 150%;
+	left: -10px;
+	transform-origin: left;
+	
+}
+
+.button a:hover {
+	color: #fff;
+	transition: all 0.5s ease;
+}
+
+
+.button a:nth-of-type(1) {
+	border-radius: 50px 0 0 50px;
+	border-right: none;
+}
+
+.button a:nth-of-type(2) {
+	border-radius: 0px 50px 50px 0;
+}
+
+.cart-icon {
+	padding-right: 8px;
+	
+}
