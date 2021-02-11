@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const productController = require("../../controllers/productController");
 
-
+/*
 router.post('/api/product/add',
     function(req,res) {
         console.log("---------- /api/product/add ----------");
@@ -13,6 +13,7 @@ router.post('/api/product/add',
         productController.create(req, res);
     }
 );
+*/
 
 router.get('/api/product/get-all',
     function(req,res) {

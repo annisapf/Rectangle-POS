@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const cors = require('cors');
-const jwt = require("jsonwebtoken");
+// const jwt = require("jsonwebtoken");
 
 // Load input validation
 const validateLoginInput = require("../../validation/login");

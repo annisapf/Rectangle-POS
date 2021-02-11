@@ -2,7 +2,7 @@ aside
 {
     position: absolute;
     height: auto;
-    width: min-content;
+    width: 26%;
     left: 0;
     border: 1px solid #111;
 }

@@ -11,30 +11,29 @@ function Shoppingcart(props) {
             <li class="product" data-price="3.5" data-quantity="1">
                 <div class="product-preview">
                     <div class="thumbnail">
-                        <img class="image" src="https://s.cdpn.io/24822/ponytails-coffee-time-coffee-cup3.png"/>
+                        <img class="image" src={props.image}/>
                     </div>
                     <div class="product-paper">
                         <div class="product-name">
                             {props.name}
                         </div>
                         <div class="product-price">
-                            {props.price}
+                            ${props.sell_price}
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-quantity">
-                    x{props.total_stock}
-                </div>
                 <div class="product-interactions">
-                <div class="button minus">-</div>
+                    <div class="button minus">
+                        -
+                    </div>
                     <div class="button">
                         1
                     </div>
                     <div class="button plus">
                         +
                     </div>
-                    </div>
+                </div>
             </li>
         </ul>
     </div>

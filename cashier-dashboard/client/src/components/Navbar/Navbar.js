@@ -17,6 +17,9 @@ class Navbar extends Component {
         e.preventDefault();
         localStorage.removeItem('username');
         localStorage.removeItem('all_user_data')
+        localStorage.removeItem('mid');
+        localStorage.removeItem('usertoken');
+
         this.setState({});
         this.props.history.push('/');
     }

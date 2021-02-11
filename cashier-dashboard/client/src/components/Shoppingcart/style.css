@@ -16,7 +16,6 @@
   .cart {
     list-style: none;
     height: 280px;
-    width: 10000px;
     cursor: grab;
     position: relative;
     left: 0;
@@ -52,6 +51,7 @@
   }
   .cart .product .product-preview .thumbnail .image {
     width: 100%;
+    height:200px;
     margin-top: 1em;
   }
   .cart .product .product-preview .product-paper {
@@ -59,7 +59,6 @@
     height: 75px;
     bottom: 0;
     background: rgba(255, 255, 255, 0.65);
-    padding: 1em;
     display: block;
     width: 100%;
     margin-left: -1em;

@@ -12,7 +12,9 @@ export const loginUser = userData => {
         console.log(res.data);
         var username = res.data.username;
         var mid = res.data.mid;
+        var usertoken = res.data.cashier_id
         localStorage.setItem('mid', mid);
+        localStorage.setItem('usertoken', usertoken);
         localStorage.setItem('username', username);
         localStorage.setItem('all_user_data' , JSON.stringify(res.data))
         return res.data;
