@@ -35,11 +35,7 @@ class Navbar extends Component {
         )
         const userLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
-                <li>
-                    <Link className='btn btn-sm active mr-1 mb-1' to='/userprofile'>
-                    <i class="far fa-smile-wink"></i> {this.state.username}
-                    </Link>
-                </li>
+           
                 <li>
                     {/* <a href="/" rel='noopener noreferrer' onClick={this.logOut.bind(this)}>
                         Logout

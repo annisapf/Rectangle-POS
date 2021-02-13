@@ -71,7 +71,7 @@ function Addcashier() {
                 <div className="subtitle">Let's add a cashier account</div>
                    
                    <div className=" input-container">
-                        <label for="username">Username</label>
+                        <label>Username</label>
                         <Input onChange={handleInputChangeUsername} id="name" className="input" name="cashiername" value={username} placeholder="john"/>
                     </div>        
 

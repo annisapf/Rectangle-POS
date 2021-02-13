@@ -59,8 +59,8 @@ class Navbar extends Component {
         const userLink = (
             <ul className='navbar-nav list-group list-group-horizontal'>
                 <li>
-                    <Link className='btn btn-sm active mr-1 mb-1' to='/userprofile'>
-                    <i class="far fa-smile-wink"></i> <space></space>{this.state.first_name}
+                    <Link className='btn btn-sm active mr-1 mb-1' to='/dashboard'>
+                    <i className="far fa-smile-wink"></i> {this.state.first_name}
                     </Link>
                 </li>
                 <li>

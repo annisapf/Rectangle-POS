@@ -4,6 +4,8 @@ import CardCashier from "../CardCashier/Cardcashier"
 
 import api_cashier from "../../utils/cashier_data"
 
+import "./style.css"
+
 function Listcashier() {
 
     const [result, setResult] = useState([]);
@@ -37,13 +39,26 @@ function Listcashier() {
     return (
             <div>
                 <Sidebar />
-                <h1>List Cashier</h1>
-                {result.map(cashier => (
-                    <CardCashier
-                    username={cashier.username}
-                    email={cashier.email}
-                    />
-                ))}
+                    <h1>List Cashier</h1>
+
+                    <div className="row outwrap">
+
+                    {result.map((cashier, index) => {
+                        return(
+                            
+                            <div className="col-sm" key={index}>
+                            <CardCashier
+                            username={cashier.username}
+                            email={cashier.email}
+                            />
+                            </div>
+
+                        )})}
+    
+                        
+                       
+
+                    </div>
             </div>
     )
     

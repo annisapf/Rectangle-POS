@@ -4,9 +4,9 @@ import "./style.css"
 function Cardcashier(props) {
   return (
 
-    <div className="wrapper">
-	    <div className="outer">
-		    <div class="content animated fadeInLeft">
+    <div className="wrapper-cashier">
+	    <div className="outer-cashier">
+		    <div className="content animated fadeInLeft">
 			    <p>Email: {props.email}</p>
 			  
 			    <p>Username: {props.username}</p>

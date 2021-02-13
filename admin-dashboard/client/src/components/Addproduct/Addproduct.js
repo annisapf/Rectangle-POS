@@ -107,7 +107,7 @@ function Addproduct() {
         <div className='container-fluid pl-0 m-0'>
             <Sidebar />
             <h1>Add Product</h1>
-            <div className="productform" enctype="multipart/form-data">
+            <div className="productform">
 
                 
                 <div className="title">Add a product</div>
