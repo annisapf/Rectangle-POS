@@ -33,7 +33,7 @@ router.post('/api/product/update',
     }
 );
 
-router.post('/api/product/remove',
+router.post('/api/product/delete',
     function (req, res)  {
         console.log (productController);
         console.log (req.body);

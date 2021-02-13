@@ -62,8 +62,9 @@ app.post('/api/product/add', upload.single('image'),
 app.use(express.static("public"));
 app.use("/upload",express.static("upload"));
 // DB Config
-const MONGODB_URI = ""
-const mongoURI = "";
+const PWD=process.env.DB_PWD;
+const MONGODB_URI = `mongodb+srv://annisa:${encodeURIComponent(PWD)}@cluster0.l77tg.mongodb.net/posrectangle`
+
 
 // Connect to MongoDB
 mongoose.connect( MONGODB_URI|| "mongodb://localhost:27017/posrectangle", {

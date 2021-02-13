@@ -109,8 +109,7 @@ function Addproduct() {
             <h1>Add Product</h1>
             <div className="productform">
 
-                
-                <div className="title">Add a product</div>
+            
                 <div className="subtitle">Let's add a product</div>
 
                      <div className=" input-container">

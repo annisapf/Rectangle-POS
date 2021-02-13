@@ -11,7 +11,7 @@ function Shoppingcart(props) {
         var cashier_product_list = JSON.parse(localStorage.getItem('cashier_product'));
         var target_product = e.target.id;
         var target_class = e.target.className;
-        alert(target_class)
+        
         
         for(var idx = 0; idx < cashier_product_list.length; idx++) {
            
@@ -50,6 +50,7 @@ function Shoppingcart(props) {
                         else {
                             if(number != 0){
                                 number = number - 1;
+                            }else{
                                 product_receipt_list.splice(item,1)
                                 break;
                             }

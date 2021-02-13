@@ -11,7 +11,7 @@ function Cardcashier(props) {
 			  
 			    <p>Username: {props.username}</p>
 			
-			  <button className="delete" oncClick={() => props.removeCashier(props.id)}>Delete</button>
+			  <button className="delete" id={props.cashier_id} name="delete" onClick={props.onClick}{...props}>Delete</button>
 			
 		    </div>
 

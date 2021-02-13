@@ -35,6 +35,31 @@ function Listcashier() {
         )
     };
 
+    function deleteCashier(e){
+        var cashier_id = e.target.id;
+
+        var cashierData = {
+            cashier_id: cashier_id
+        }
+
+
+
+        var cashierListPromise = api_cashier.deleteCashier(cashierData);
+        cashierListPromise
+        .then(
+            function(response)
+            {
+                loadCashiers()
+            }
+        )
+        .catch(
+            function(err)
+            {
+                console.log(err)
+            }
+        )
+    }
+
     
     return (
             <div>
@@ -50,6 +75,8 @@ function Listcashier() {
                             <CardCashier
                             username={cashier.username}
                             email={cashier.email}
+                            cashier_id={cashier._id}
+                            onClick={deleteCashier}
                             />
                             </div>
 

@@ -67,7 +67,6 @@ function Addcashier() {
             <h1>Add Cashier</h1>
              <div className="cashierform">
         
-                <div className="title">Add a cashier</div>
                 <div className="subtitle">Let's add a cashier account</div>
                    
                    <div className=" input-container">

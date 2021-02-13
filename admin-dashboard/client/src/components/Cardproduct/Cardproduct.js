@@ -15,8 +15,7 @@ function Cardproduct(props) {
       			<p>Base Price: {props.base_price}</p>
       			<p>Sell Price: {props.sell_price}</p>
       			<p>Tax: {props.tax}</p>
-				<button className="delete btn-dangerous delete-product" oncClick={() => props.removeProduct(props.id)}>Delete</button>
-			
+				<button className="delete btn-dangerous delete-product" id={props.product_id} name="delete-product" onClick={props.onClick}{...props}>Delete</button>
 			
 		</div>
 		<img src={props.image} width="380px" height="370px" className="animated fadeInRight"/>

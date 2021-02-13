@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/login";
 import Dashboard from "./components/pages/Dashboard/Dashboard";
 import User from "./components/pages/User/User";
+import Receipt from "./components/Finalreceipt/Finalreceipt";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ class App extends Component {
                             <Route exact path="/login" component={Login} />
                             <Route exact path="/dashboard" component={Dashboard} />
                             <Route exact path="/userprofile" component={User}/>
+                            <Route exact path="/receipt" component={Receipt}/>
                         </div>
                     </div>
                 </Router>

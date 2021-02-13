@@ -16,10 +16,16 @@ function getProduct(merchantData){
     return axios.get("/api/product/get-all", merchantData);
 };
 
+function deleteProduct(productData){
+    console.log("deleteProduct")
+    return axios.post("/api/product/delete", productData)
+}
+
 
 const api_product = {
     addProduct,
-    getProduct
+    getProduct,
+    deleteProduct
 };
 
 export default api_product;

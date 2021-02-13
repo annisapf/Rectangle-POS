@@ -1,14 +1,12 @@
 const db = require("../models");
 module.exports = {
     findAll: function(req,res) {
-        console.log("---------------------------")
-        //console.log(req);
-        console.log("---------------------------")
+      
         db.Cashier.find(
             {mid : req.body.mid},
             function(err, obj)
             {
-                console.log(obj);
+            
                 res.send(obj);
             }
         )
@@ -17,10 +15,13 @@ module.exports = {
     remove: function(req, res){
         var req_body = req.body;
         var cashier_id = req_body.cashier_id;
+        console.log("-----------------remove----------------------")
+        console.log(req_body.cashier_id)
         db.Cashier.deleteOne(
             {"_id" :  cashier_id},
             function(err, obj)
             {
+                console.log(obj)
                 res.send({
                     "removed" : obj
                 })
@@ -30,9 +31,7 @@ module.exports = {
     create: function(req,res) {
         var req_body = req.body;
 
-        console.log ( "--------------------" );
-        console.log ( req_body );
-        console.log ( "--------------------" );
+       
 
         db.Cashier.findOne(
             {
