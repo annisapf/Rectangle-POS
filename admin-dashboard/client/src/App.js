@@ -36,7 +36,7 @@ class App extends Component {
                             <Route exact path="/addproduct" component={Addproduct} />
                             <Route exact path="/listproduct" component={Listproduct} />
                             <Route exact path="/transaction" component={Transaction} />
-                            <Route exact path="/userprofile" component={Auth(User)}/>
+                            <Route exact path="/dashboard" component={Auth(User)}/>
                         </div>
                     </div>
                 </Router>

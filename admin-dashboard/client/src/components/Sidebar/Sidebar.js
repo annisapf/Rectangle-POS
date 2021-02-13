@@ -72,7 +72,7 @@ function Sidebar() {
                                 {/* Nav Item - Transaction History */}
                                 <Item active={''}
                                         href={"/transaction"}
-                                        icon={<i class="fas fa-chart-line"></i>}
+                                        icon={<i className="fas fa-chart-line"></i>}
                                         text={<span>Transaction History</span>} />
 
 

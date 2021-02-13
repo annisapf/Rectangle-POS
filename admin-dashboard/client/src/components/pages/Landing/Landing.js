@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import "./style.css";
-import LandingJumbo from "../../LandingJumbo/LandingJumbo";
-import BrandDescription from "../../BrandDescription/BrandDescription"
+import homepage_image from "../../assets/images/homepage_services.png"
+import { Link } from "react-router-dom";
 
 class Landing extends Component {
     render() {
+        
         return (
-            <div className="container-fluid p-0 m-0">
-                <div className="d-flex justify-content-center backgroundImg">
-                    <LandingJumbo />
-                </div>     
-                <BrandDescription />
+           <div>
+                <div className="join-btn">
+                    <p>Get free access, today.</p>
+                        <Link className="btn" to="/register">Join Now</Link>
+                </div>
+                <img src={homepage_image} className="image"/>
             </div>
         );
     } 

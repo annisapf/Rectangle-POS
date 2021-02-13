@@ -1,21 +1,17 @@
-* {
-	box-sizing: border-box;
-}
 
-.wrapper {
-    margin-left: 30%;
+.wrapper-cashier {
 	font-family: Montserrat;
 	width: 260px;
     height: 150px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	margin:20px 10px 10px 10px; 
 }
 
-.outer {
+.outer-cashier {
 	position: relative;
 	height: 300px;
 	width: 280px;
     padding: 25px;
-
 }
 
 

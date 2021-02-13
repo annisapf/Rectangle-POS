@@ -3,29 +3,28 @@
 }
 
 .wrapper-product {
-    margin-left: 30%;
+    margin-left: 3%;
+	margin-top: 20px;
 	justify-content: center;
 	align-items: center;
 	font-family: Montserrat;
-	width: 600px;
+	width: 480px;
 	height: 330px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 .outer-product {
 	position: relative;
-	
 	height: 250px;
 	width: 550px;
-
 	align-items: center;
 }
 
 img {
 	position: absolute;
 	top: 20px;
-	right: -30px;
-	width:300px;
+	right: 90px;
+	width:250px;
 	height:300px;
 	animation-delay: 0.5s;
 }
@@ -36,6 +35,12 @@ img {
 	left: 20px;
 	z-index: 3
 	
+}
+
+.delete-product {
+	width: 80px;
+	height: 30px;
+	background-color: red;
 }
 
 p {
@@ -52,11 +57,7 @@ p {
 	border-radius: 50px;
 	font-size: .7em;
 }
-.button {
-	width: fit-content;
-	height: fit-content;
-	margin-top: 10px;
-}
+
 
 .button a {
 	display: inline-block;
