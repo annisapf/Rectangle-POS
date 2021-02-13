@@ -28,10 +28,12 @@ class DashBoard extends Component {
         return (
             <div className="container-fluid pl-0">
                     <Sidebar />
-                    <div>
+                    <div className="outwrapper-dashboard">
                         <h1>
                              Welcome { this.state.first_name }
                         </h1>
+
+                    
 
                     <div className="row">
                         <div className="wrapper-dashboard col-sm-3">
@@ -39,6 +41,15 @@ class DashBoard extends Component {
 		                        <div className="content-product animated fadeInLeft">
 			                        <span className="bg-product animated fadeInDown">Cashier</span>
 			                        <h3>Total Cashier: 4</h3>
+		                        </div>	
+                            </div>
+                        </div>
+
+                        <div className="wrapper-dashboard col-sm-3">
+	                        <div className="outer-product">
+		                        <div className="content-product animated fadeInLeft">
+			                        <span className="bg-product animated fadeInDown">Product</span>
+			                        <h3>Total Product: 100</h3>
 		                        </div>	
                             </div>
                         </div>

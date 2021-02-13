@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
 
-import Receipt from "../../Receipt/Receipt"
-import Shoppingcart from "../../../components/Shoppingcart/Shoppingcart"
-
-import api_shopping from "../../../utils/shopping_data"
+import Receipt from "../Receipt/Receipt"
 
 import "./style.css"
 
-function DashBoard() {
+
+
+function Transaction() {
 
     const [shoppingcart, setShoppingcart] = useState(
         JSON.parse(localStorage.getItem('cart'))
     )
+
     const [result, setResult] = useState([]);
     const [subtotalReceipt, setSubtotalReceipt] = useState([]);
     const [taxReceipt, setTaxReceipt] = useState([])
     const [totalpriceReceipt, setTotalpriceReceipt] = useState([])
 
-
-    useEffect(() => {
-        loadShoppings()
-    }, [setResult]);
 
     useEffect(() => {
         loadPrice()
@@ -65,29 +61,7 @@ function DashBoard() {
         setTotalpriceReceipt(total_price_receipt.toFixed(2))
     }
 
-    function loadShoppings() {
-        var shoppingData = {
-            mid: localStorage.mid,
-        
-        }
-        var shoppingListPromise = api_shopping.getShopping(shoppingData);
-        shoppingListPromise
-        .then(
-            function(response)
-            {
-                setResult(response.data)
-                localStorage.setItem('cashier_product', JSON.stringify(response.data))
-                console.log(response.data);
-            }
-        )
-        .catch(
-            function(error)
-            {
-                console.log(error)
-            }
-        )
-    };
-
+    
 
 
     
@@ -101,33 +75,9 @@ function DashBoard() {
                      total_price={totalpriceReceipt}
                     />
                     
-                    <div>
-                        <h1>
-                             Welcome Cashier
-                        </h1>
-
-                        <div className="row wrapper">
-                       
-                            {result.map((product, index) => {
-                            return (
-                           
-                                <div className="col-md" key={index}>
-                                    <Shoppingcart
-                                    name={product.name}
-                                    sell_price={product.sell_price}
-                                    image={product.image}
-                                    product_id={product._id}
-                                    />
-                                </div>
-                        
-                            )})} 
-                        
-                        </div>
-       
-                    </div>
             </div>
         );
     } 
 
 
-export default DashBoard;
+export default Transaction;

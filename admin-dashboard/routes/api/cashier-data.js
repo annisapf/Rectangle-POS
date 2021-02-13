@@ -21,7 +21,7 @@ router.post('/api/cashier/get-all',
 });
 
 
-router.post('/api/cashier/remove',
+router.post('/api/cashier/delete',
     function (req, res)  {
         console.log (cashierController);
         console.log (req.body);

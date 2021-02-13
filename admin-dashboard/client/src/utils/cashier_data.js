@@ -5,14 +5,20 @@ function addCashier(cashierData){
 };
 
 function getCashier(merchantData){
-    console.log("getCashier")
-    console.log(merchantData)
+
     return axios.post("/api/cashier/get-all", merchantData);
 };
 
+function deleteCashier(cashierData){
+    console.log("deleteCashier")
+    console.log(cashierData)
+    return axios.post("/api/cashier/delete", cashierData)
+}
+
 const api_cashier = {
     addCashier,
-    getCashier
+    getCashier,
+    deleteCashier
 };
 
 export default api_cashier;

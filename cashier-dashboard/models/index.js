@@ -1,4 +1,5 @@
 module.exports = {
   Cashier: require("./Cashier"),
-  Shopping: require("./Shopping")
+  Shopping: require("./Shopping"),
+  Transaction: require("./Transaction")
 };

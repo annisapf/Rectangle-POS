@@ -37,6 +37,40 @@ function Listproduct() {
         )
     };
 
+    function deleteProduct(e){
+
+        var product_id = e.target.id;
+
+        var merchantData = {
+            product_id: product_id
+        }
+
+        var productListPromise = api_product.deleteProduct(merchantData);
+        productListPromise
+        .then(
+            function(response)
+            {
+                loadProduct()
+            }
+        )
+        .catch(
+            function(err)
+            {
+                console.log(err)
+            }
+        )
+    }
+    
+    function handleButtonClick(event){
+        event.stopPropagation();
+
+        const delete_product = event.currentTarget.getAttribute("mid")
+
+        if(event.currentTarget.name === "delete-product") {
+            console.log("delete product clicked")
+            deleteProduct(delete_product)
+        }
+    }
     
     return (
             <div>
@@ -59,6 +93,8 @@ function Listproduct() {
                         sell_price = {product.sell_price}
                         total_stock = {product.total_stock}
                         tax = {product.tax}
+                        id={product._id}
+                        onClick={deleteProduct}
                         />
 
                         </div>

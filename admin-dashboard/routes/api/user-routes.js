@@ -61,6 +61,9 @@ router.post('/api/login', (req, res) => {
         email: req.body.email
     })
         .then(response => {
+            console.log(response)
+            console.log(req.body)
+            
             if (response) {
                 
                console.log(req.body); 
