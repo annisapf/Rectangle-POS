@@ -45,31 +45,18 @@ It would be particularly helpful to be able to filter product in stock and trans
 
 
 ## Usage
+To install necessary dependencies, run the following command:
     
-### `yarn start`
+```
+npm ci
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run the apps
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-  
+```
+npm start
+```
+    
 ## License
 The license is MIT standard license.
         
@@ -78,7 +65,8 @@ The license is MIT standard license.
 It is an open project and everyone can contribute - please send an email requesting to be added as a contributor
 
 ## Link to the App
-<a href="http://rectangle.store">The URLs of the deployed application</a><hr>
+<a href="http://admin.rectangle.store">The URLs of the Admin Dashboard</a><hr>
+<a href="http://cashier.rectangle.store">The URLs of the Cashier Dashboard</a><hr>
 
      
 ## Questions
