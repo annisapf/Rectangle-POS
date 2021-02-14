@@ -60,7 +60,7 @@ module.exports = {
         // write the file to the /upload folder
 
         var filename_original = req.file.originalname
-        var url = "http://localhost:5001/upload/" + filename_original
+        var url = "/upload/" + filename_original
         req_body.image = url;
         db.Product.insertMany(req_body);
         console.log("------------------------")

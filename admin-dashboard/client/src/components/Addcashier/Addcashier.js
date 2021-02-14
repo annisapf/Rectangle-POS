@@ -5,6 +5,8 @@ import "./style.css"
 
 import api_cashier from "../../utils/cashier_data";
 
+import PasswordMask from 'react-password-mask'
+
 function Addcashier() {
 
 
@@ -81,7 +83,7 @@ function Addcashier() {
 
                     <div className="input-container">
                         <label>Password</label> 
-                        <Input onChange={handleInputChangePassword} className="input" name="cashierpassword" value={password} placeholder="password"/>
+                        <PasswordMask onChange={handleInputChangePassword} className="input" name="cashierpassword" value={password} placeholder="password"/>
                     </div>
 
                     <div className="input-container">
