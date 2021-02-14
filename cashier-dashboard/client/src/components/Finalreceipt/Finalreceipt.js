@@ -127,6 +127,8 @@ function Finalreceipt() {
             function(response)
             {
                 console.log(response.data)
+                localStorage.setItem('cart',JSON.stringify([]))
+                window.location = "/dashboard"
             }
         ).catch(
             function(err)
