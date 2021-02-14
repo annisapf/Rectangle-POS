@@ -32,8 +32,11 @@ POS has an important role for small business to help their business running. It 
 
 
 ## Demo
+Cashier Dashboard
 ![gif-cashierdashboard](https://user-images.githubusercontent.com/7066137/107843424-ff865500-6e1e-11eb-8486-0b50a3654033.gif)
 
+Admin Dashboard
+![gif (1)](https://user-images.githubusercontent.com/7066137/107871118-dcc57080-6ef2-11eb-9169-dc5dcdfcd123.gif)
 
 ## Business Context
 
